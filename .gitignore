@@ -20,3 +20,5 @@ githash.txt
 tests/tc*/actual*.txt
 stderr.txt
 stdout.txt
+
+/.dub/
