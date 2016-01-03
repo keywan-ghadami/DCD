@@ -13,25 +13,21 @@
 		{
                         "name": "library",
                         "targetType": "library",
-                        "excludedSourceFiles": ["src/client","src/server/server.d"]
+                        "excludedSourceFiles": ["src/client/*","src/server/server.d"]
                 },
 		{
 			"name": "client",
 			"targetType": "executable",
 			"targetName": "dcd-client",
-			"buildRequirements":["noDefaultFlags"],
-			"buildOptions":["releaseMode","inline","optimize","warnings"],
 			"mainSourceFile": "src/client/client.d",
-			"excludedSourceFiles": ["src/server"]
+			"excludedSourceFiles": ["src/server/*"]
 		},
 		{
 			"name": "server",
 			"targetType": "executable",
 			"targetName": "dcd-server",
-			"buildRequirements":["noDefaultFlags"],
-			"buildOptions":["releaseMode","optimize","warnings"],
 			"mainSourceFile": "src/server/server.d",
-			"excludedSourceFiles": ["src/client"]
+			"excludedSourceFiles": ["src/client/*"]
 		}
 	]
 }
